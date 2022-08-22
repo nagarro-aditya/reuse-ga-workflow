@@ -1,0 +1,17 @@
+name: Gradle Build
+
+on:
+  push:
+    branches: [
+        main,
+        master,
+        'feature/**'
+    ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  gradle-build-test:
+    uses: nagarro-aditya/central-ga/.github/workflows/reusable-gradle-build.yml@gradle-build
